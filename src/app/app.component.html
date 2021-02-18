@@ -1,0 +1,222 @@
+<header>
+    <div class="nav">
+        <a target="_blank" [href]="logoURL"> <img src="assets/shopluslogo.png" alt=""></a>
+
+    </div>
+    <article>
+        <section *ngIf="banner" class="left-column">
+            <h1 [innerHTML]="bypassHtmlSecurity(banner.title)">
+            </h1>
+            <p [innerHTML]="bypassHtmlSecurity(banner.subTitle)" class="medium-text">
+            </p>
+            <div>
+                <a class="splus-button" [href]="buttonURL">
+                    Dùng Thử Ngay
+                </a>
+            </div>
+        </section>
+        <section class="right-column">
+            <img *ngIf="banner" [src]="banner.image" alt="">
+            <img *ngIf="!banner" class="loader" src="assets/loader.svg" alt="">            
+        </section>
+    </article>
+</header>
+<main class="pain-point">
+    <div class="bg"></div>
+    <article>
+        <h2>
+            <span class="top"></span>Những nhọc nhằn gian khó <br>
+            <span class="bottom">chỉ có LiveStreamer mới hiểu </span>
+        </h2>
+        <section class="pains">
+            <div *ngFor="let col of painPoint$ | async" class="col">
+                <div class="pain-image">
+                    <img [src]="col.image" alt="">
+                </div>
+                <div class="pain-description">
+                    <p class="medium-text">
+                        {{col.title}}
+                    </p>
+                    <p class="text">
+                        {{col.text}}
+                    </p>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+<main class="solution">
+    <img class="bg" src="assets/solutionbg.png" alt="">
+    <article>
+        <h2>
+            Lọc bình luận & Chốt đơn Livestream <br>
+            theo thời gian thực
+            <span class="hightlight">
+            </span>
+        </h2>
+        <section class="before-after">
+            <aside class="before">
+                <p class="medium-text">
+                    <span class="hightlight">
+                        Không dùng </span> Shoplus
+                </p>
+                <div *ngFor="let item of beforeSource$ | async" class="item">
+                    <div class="image">
+                        <img [src]="item.icon" alt="">
+                    </div>
+                    <p class="text">
+                        {{item.text}}
+                    </p>
+                </div>
+            </aside>
+            <div class="solution-image">
+                <img src="assets/solutionimg.gif" alt="">
+            </div>
+            <aside class="after">
+                <p class="medium-text">
+                    <span class="hightlight">
+                        Sử dụng </span> Shoplus
+                </p>
+                <div *ngFor="let item of afterSource$ | async" class="item">
+                    <div class="image">
+                        <img [src]="item.icon" alt="">
+                    </div>
+                    <p class="text">
+                        {{item.text}}
+                    </p>
+                </div>
+            </aside>
+        </section>
+    </article>
+</main>
+<main class="how-to-use">
+    <article>
+        <h2>
+            Hướng dẫn sử dụng
+        </h2>
+        <div *ngIf="howToUse" (click)="playVideo(3, video3, howToUse.iframe)" #video3 class="video">
+            <img class="dots left" src="assets/dots.png">
+            <img class="dots right" src="assets/dots.png">
+            <div *ngIf="videosOverlay[3]" class="video-overlay">
+                <img class="bg" [src]="howToUse.overlay">
+            </div>
+            <iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div *ngIf="!howToUse" (click)="playVideo(3, video4)" #video4 class="video">
+                <img *ngIf="!howToUse" class="loader" src="assets/loader.svg" alt=""> 
+        </div>
+    </article>
+</main>
+
+<main class="testimonials">
+    <img class="testimonials-bg" src="assets/testimonialbg.png" alt="">
+    <article>
+        <h2>
+            Khách hàng tin dùng Shoplus <span class="highlight"></span>
+        </h2>
+
+        <div class="videos">
+            <ng-container *ngIf="testimonials$">
+                <div *ngFor="let video of (testimonials$ | async), let i = index" (click)="playVideo(i, video0, video.iframe)" #video0
+                    class="video">
+                    <div *ngIf="videosOverlay[i]" class="video-overlay">
+                        <img class="bg" [src]="video.overlay">
+                        <div class="description">
+                            <p class="medium-text">
+                                {{video.shopOwner}} <br>
+                                {{video.shopName}}
+                            </p>
+                            <img src="assets/playbutton.png" alt="">
+                        </div>
+                    </div>
+                    <iframe frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </ng-container>
+        </div>
+    </article>
+</main>
+
+<main class="partners">
+    <article class="top">
+        <div class="shoplus">
+            <a [href]="logoURL" target="_blank">
+                <img src="assets/shopluslogo.png" alt=""></a>
+            <p class="medium-text">
+                Hiệu Quả - Đơn Giản - Dễ Dùng
+            </p>
+        </div>
+        <div class="partners">
+            <div class="partner">
+                <div class="logo">
+                    <img src="assets/facebook.svg" alt="">
+                </div>
+                <p class="text">
+                    Đối tác marketing chính thức duy nhất tại Việt Nam của Facebook
+                </p>
+            </div>
+            <div class="partner">
+                <div class="logo">
+                    <img src="assets/unilever.svg" alt="">
+                </div>
+                <p class="text">
+                    Đối tác kỹ thuật hỗ trợ livestream của Unilever Philippine
+                </p>
+            </div>
+            <div class="partner">
+                <div class="logo">
+                    <img src="assets/others.svg" alt="">
+                </div>
+                <p class="text">
+                    Đối tác tin cậy của 80 nghìn online shop ở Thái Lan, Philippine và Việt Nam
+                </p>
+            </div>
+        </div>
+    </article>
+    <article class="header">
+        <h2>
+            <span class="highlight">TRẢI NGHIỆM MIỄN PHÍ</span> <br> Shoplus ngay!
+        </h2>
+    </article>
+    <article class="stores">
+        <a class="splus-button" target="_blank" [href]="buttonURL">
+            <img src="assets/laptop.png" alt="">
+            Phiên bản Web
+        </a>
+        <div class="line-break"></div>
+        <a class="store" target="_blank" [href]="iOS">
+            <img src="assets/appstore.png" alt="">
+        </a>
+        <a class="store" target="_blank" [href]="android">
+            <img src="assets/ggplay.png" alt="">
+        </a>
+    </article>
+</main>
+
+<footer>
+    <img class="bg" src="assets/footerbg.png" alt="">
+    <article>
+        <a [href]="logoURL" target="_blank">
+            <img src="assets/shopluslogo.png" alt=""> </a>
+        <p class="medium-text">
+            Sản phẩm của CÔNG TY TNHH IKALA VIỆT NAM
+        </p>
+        <p class="text">
+            Số giấy chứng nhận đăng ký kinh doanh: 0315632122 <br> Ngày cấp: 16/04/2019. Nơi cấp: Sở kế hoạch và đầu tư
+            thành phố Hồ Chí Minh.
+            <br> Địa chỉ: Tầng 6, 62 Trần Quang Khải, P. Tân Định, Quận 1, HCM <br> Hotline: <a target="_blank" href="tel:02873002340">028 7300 2340 </a><br>
+            Email:
+            <a href="mailto:contactvn@shoplus.me">contactvn@shoplus.me</a> - Website: <a target="_blank" href="https://shoplus.me">https://shoplus.me</a> 
+        </p>
+        <section class="socials">
+            <a target="_blank" href="https://www.facebook.com/shoplusVN/"><img src="assets/facebook.png" alt=""></a>
+            <a target="_blank" href="https://www.messenger.com/t/shoplusVN"><img src="assets/messenger.png" alt=""></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCmE-chPKGqguiq3JaHfiWTw"><img
+                    src="assets/youtube.png" alt=""></a>
+        </section>
+    </article>
+
+    <img class="footer-curve" src="assets/footer-curve.svg" alt="">
+</footer>

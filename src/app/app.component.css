@@ -1,0 +1,532 @@
+footer,
+header,
+main.how-to-use {
+  overflow: hidden;
+}
+.nav {
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  left: 0;
+}
+/****************
+*****************
+BANNER
+*****************
+****************/
+
+header {
+  font-weight: bold;
+  padding-bottom: 30px;
+  position: relative;
+  margin-bottom: -140px;
+}
+
+header article {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  max-height: 800px;
+  overflow: visible;
+}
+
+header article section {
+  height: 100%;
+}
+
+header article section.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 40%;
+  flex-shrink: 0;
+}
+
+header article section.left-column h1,
+header article section.left-column p {
+  margin-bottom: 25px;
+}
+
+header article section.left-column .splus-button {
+  text-decoration: none;
+  outline: none;
+  color: #fafafa;
+  background: #ef6f65;
+  display: inline-block;
+  padding: 16px 24px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+}
+
+header article section.right-column {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+header article section img {
+  width: auto;
+  height: 100%;
+  z-index: 10;
+}
+
+/****************
+*****************
+SELLER PAIN POINT
+*****************
+****************/
+
+main.pain-point {
+  padding-top: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+main.pain-point .bg {
+  border-top-left-radius: 80%;
+  border-top-right-radius: 80%;
+  background: linear-gradient(
+      to top,
+      #ffffff 15%,
+      rgba(239, 111, 101, 0.1) 80%,
+      rgba(239, 111, 101, 0.2) 120%
+    );
+  height: 100%;
+  width: 200%;
+  top: 0;
+  left: 50%;
+  position: absolute;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
+main.pain-point article h2 {
+  text-align: center;
+  color: #3d3d3d;
+}
+
+main.pain-point article .pains {
+  display: flex;
+  flex-wrap: wrap;
+}
+main.pain-point article .pains .col {
+  width: calc(100% / 3);
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+main.pain-point article .pain-image {
+  margin-bottom: 30px;
+}
+
+main.pain-point article .col .medium-text {
+  color: #ef6f65;
+  margin-bottom: 10px;
+}
+/****************
+*****************
+SHOPLUS SOLUTIONS
+*****************
+****************/
+main.solution {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+main.solution .bg {
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 80%;
+  background: linear-gradient(
+      180deg,
+      #ffffff 84.16%,
+      rgba(255, 255, 255, 0) 103.26%
+    ),
+    #ededed;
+  height: 100%;
+  width: 200%;
+  top: 0;
+  left: 50%;
+  position: absolute;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
+main.solution article h2 .highlight {
+  color: rgba(95, 199, 216, 0.9);
+}
+
+main.solution article .before-after {
+  display: flex;
+}
+
+main.solution article .before-after .solution-image {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+main.solution article .before-after .solution-image img {
+  width: 100%;
+}
+
+main.solution article .before-after .medium-text {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+main.solution article .before-after .before,
+main.solution article .before-after .after {
+  width: 280px;
+}
+
+main.solution article .before-after .before .hightlight {
+  color: #ef6f65;
+}
+
+main.solution article .before-after .after .hightlight {
+  color: #5fc7d8;
+}
+
+main.solution article .before-after .item {
+  margin: auto;
+  display: flex;
+  padding: 25px;
+}
+
+main.solution article .before-after .item .text {
+  width: 184px;
+  margin-left: 20px;
+}
+
+/****************
+*****************
+HOW TO USE
+*****************
+****************/
+
+main.how-to-use {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+main.how-to-use article h2 {
+  text-align: center;
+}
+
+main.how-to-use article .video {
+  max-width: 780px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+main.how-to-use article .video .dots {
+  position: absolute;
+}
+
+main.how-to-use article .video .dots.left {
+  top: -40px;
+  left: -100px;
+  z-index: -1;
+}
+
+main.how-to-use article .video .dots.right {
+  bottom: -60px;
+  right: -100px;
+  z-index: 2;
+}
+
+main.how-to-use article .video iframe {
+  height: 400px;
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+main.how-to-use article .video-overlay {
+  position: absolute;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+main.how-to-use article .video-overlay img.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  display: block;
+  cursor: pointer;
+}
+
+/****************
+*****************
+TESTIMONIALS
+*****************
+****************/
+
+main.testimonials {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+main.testimonials .testimonials-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  z-index: -1;
+}
+
+main.testimonials h2 .highlight {
+  color: #ef6f65;
+}
+
+main.testimonials .videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+main.testimonials .videos .video {
+  position: relative;
+  max-width: 370px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+main.testimonials .videos .video-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+main.testimonials .videos .video-overlay img.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  display: block;
+  cursor: pointer;
+}
+
+main.testimonials .videos .video-overlay .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 16px 16px;
+  z-index: 2;
+  width: 100%;
+  cursor: pointer;
+}
+
+main.testimonials .videos .video-overlay .description p.medium-text {
+  color: #fafafa;
+  text-align: left;
+}
+
+main.testimonials .videos .video-overlay .description img {
+  height: 41px;
+}
+main.testimonials .videos .video iframe {
+  height: 200px;
+  width: 380px;
+  max-width: 370px;
+  display: block;
+}
+
+/****************
+*****************
+PARTNERS
+*****************
+****************/
+
+main.partners {
+  padding-bottom: 80px;
+}
+
+main.partners article.top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+main.partners .shoplus {
+  width: 500px;
+}
+
+main.partners .shoplus img {
+  position: relative;
+  right: 24px;
+}
+
+main.partners .shoplus .medium-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+main.partners .partners {
+  width: 580px;
+  line-height: 1.6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main.partners .partners .partner {
+  width: 180px;
+  text-align: center;
+  font-weight: 650;
+}
+
+main.partners .partners .partner p.text {
+  font-weight: 400;
+}
+
+main.partners .partners .partner .logo {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+main.partners article.header h2 {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px ;
+}
+
+main.partners article.header h2 br {
+  display: none;
+}
+
+main.partners article.header h2 .highlight {
+  color: #ef6f65;
+}
+
+main.partners article.stores {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+main.partners article.stores .splus-button {
+  width: 260px;
+  font-size: 20px;
+  text-decoration: none;
+  outline: none;
+  color: #fafafa;
+  background: #ef6f65;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 82px;
+}
+
+main.partners article.stores .splus-button img {
+  height: 48px;
+  width: 48px;
+  margin-right: 15px;
+}
+
+main.partners article.stores a:not(:first-child) {
+  width: 260px;
+  height: 85px;
+  text-align: center;
+}
+
+main.partners article.stores a:first-child {
+  margin-right: 20px;
+}
+
+main.partners article.stores a img {
+  width: 260px;
+  height: 85px;
+}
+
+main.partners article.stores .line-break {
+  display: none;
+}
+
+/****************
+*****************
+FOOTER
+*****************
+****************/
+
+footer {
+  background: no-repeat top center/cover;
+  position: relative;
+  padding-bottom: 120px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+footer .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index:-2;
+}
+
+footer p {
+  text-align: center;
+  line-height: 2;
+  color: #000;
+  font-weight: 600;
+}
+
+footer p.medium-text {
+  font-weight: bold;
+}
+
+footer .footer-curve {
+  position: absolute;
+  bottom: 0;
+  left: -2%;
+  z-index: 0;
+  width: 103%;
+  display: block;
+}
+
+footer .socials {  
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  margin: auto;
+  margin-top:30px;
+}
+
+footer  a{
+  outline: none;
+  text-decoration: none;
+  color: #000;
+}
+
+footer .socials a {
+}
